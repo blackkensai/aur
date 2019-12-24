@@ -1,0 +1,18 @@
+diff -u -r Python-3.8.1/Lib/subprocess.py Python-3.8.1-fixed/Lib/subprocess.py
+--- Python-3.8.1/Lib/subprocess.py	2019-12-24 14:08:50.025303916 +0800
++++ Python-3.8.1-fixed/Lib/subprocess.py	2019-12-24 14:12:39.388642909 +0800
+@@ -841,12 +841,12 @@
+                             line_buffering=line_buffering,
+                             encoding=encoding, errors=errors)
+             if c2pread != -1:
+-                self.stdout = io.open(c2pread, 'rb', bufsize)
++                self.stdout = io.open(c2pread, 'rb', -1)
+                 if self.text_mode:
+                     self.stdout = io.TextIOWrapper(self.stdout,
+                             encoding=encoding, errors=errors)
+             if errread != -1:
+-                self.stderr = io.open(errread, 'rb', bufsize)
++                self.stderr = io.open(errread, 'rb', -1)
+                 if self.text_mode:
+                     self.stderr = io.TextIOWrapper(self.stderr,
+                             encoding=encoding, errors=errors)
