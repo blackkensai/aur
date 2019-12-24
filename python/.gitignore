@@ -1,0 +1,4 @@
+pkg
+*.xz
+src
+*.asc
