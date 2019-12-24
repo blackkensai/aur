@@ -1,0 +1,18 @@
+_pkgname=torchtext
+pkgname=python-torchtext
+pkgver=0.4.0
+pkgrel=1
+pkgdesc='Data loaders and abstractions for text and NLP'
+arch=(any)
+url='https://github.com/pytorch/text'
+license=(BSD)
+depends=(python python-pytorch python-tqdm python-requests)
+makedepends=(python-setuptools)
+source=("text-${pkgver}.tar.gz::https://github.com/pytorch/text/archive/${pkgver}.tar.gz")
+sha512sums=('6af3824af3d3e6e291f797c79e83a8230b9c44ec8a520615ec1d7ead95bd381465b9d01ffa7cf1f4715871f50d53f6353c7ecdc56dbc63177a567cb10da35daa')
+
+package() {
+  cd text-${pkgver}
+  python setup.py install --root=${pkgdir} --optimize=1
+	install -Dm644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}"
+}
