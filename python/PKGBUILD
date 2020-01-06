@@ -28,7 +28,7 @@ source=("https://www.python.org/ftp/python/${pkgver%rc*}/Python-${pkgver}.tar.xz
 sha512sums=('d41381848cc1ec8009643b71875f395a9ac2c8e12a5b1efef33caf8a9e99a337c790d4354695c85352d11b62092ae372b5af62f78724363fcbf3504ff9a6ddca'
             'SKIP'
             'ebd04c3b6d41321b1f0d439d356e0ce463760db55dc64109854c70d017cf56608aa19de9fc4a21bf840795ff202b4703444f9af8074b661780798c17e03089ff'
-            'f86f41816c96043f1ab03d37c2e3a41dbe59da5b97adb170eed77ac782feeef64bdd67a2e6a9ba30dc5e220b44db4a569273f58b27aabb999005209a90c9cec3')
+            '2ec7eb2c5b6ba8bfcf810af92c59526938ecf9127e749721e3e9f396aaad93d04c1c38241233c857b3044632a0aad865039ae2ebd1267f966f34598937d9998d')
 validpgpkeys=('0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D'  # Ned Deily (Python release signing key) <nad@python.org>
               'E3FF2839C048B25C084DEBE9B26995E310250568') # Łukasz Langa (GPG langa.pl) <lukasz@langa.pl>
 

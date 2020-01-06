@@ -1,7 +1,14 @@
 diff -u -r Python-3.8.1/Lib/subprocess.py Python-3.8.1-fixed/Lib/subprocess.py
 --- Python-3.8.1/Lib/subprocess.py	2019-12-24 14:08:50.025303916 +0800
-+++ Python-3.8.1-fixed/Lib/subprocess.py	2019-12-24 14:12:39.388642909 +0800
-@@ -841,12 +841,12 @@
++++ Python-3.8.1-fixed/Lib/subprocess.py	2020-01-06 17:08:28.766766602 +0800
+@@ -835,18 +835,18 @@
+ 
+         try:
+             if p2cwrite != -1:
+-                self.stdin = io.open(p2cwrite, 'wb', bufsize)
++                self.stdin = io.open(p2cwrite, 'wb', -1)
+                 if self.text_mode:
+                     self.stdin = io.TextIOWrapper(self.stdin, write_through=True,
                              line_buffering=line_buffering,
                              encoding=encoding, errors=errors)
              if c2pread != -1:
