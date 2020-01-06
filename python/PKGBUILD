@@ -6,7 +6,7 @@
 
 pkgname=python
 pkgver=3.8.1
-pkgrel=0
+pkgrel=1.1
 _pybasever=${pkgver%.*}
 pkgdesc="Next generation of the python high-level scripting language, this version fixed line buffering warning in subprocess.py"
 arch=('x86_64')
